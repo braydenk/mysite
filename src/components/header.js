@@ -4,6 +4,8 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import menu from "../images/menu.svg"
 import cancel from "../images/x.svg"
+import terminal from "../images/terminal.svg"
+import terminalBlack from "../images/terminal-black.svg"
 
 const StyledHeader = styled.header`
   position: fixed;
@@ -60,12 +62,12 @@ const CancelButtonContainer = styled.div`
   width: 50px;
   height: 50px;
   align-self: flex-end;
-  margin: 8px 32px;
+  margin: 16px 8px;
 `
 
-const Header = ({ siteTitle }) => {
+const Header = props => {
   const [isMenuOpen, toggleMenuOpen] = useState(false)
-
+  console.log(props.leftIconDark)
   return (
     <StyledHeader>
       <div>
@@ -78,12 +80,15 @@ const Header = ({ siteTitle }) => {
             fontWeight: "bold",
           }}
         >
-          BK.
+          <img
+            src={props.leftIconDark ? terminalBlack : terminal}
+            alt="Terminal"
+          />
         </Link>
       </div>
       <div>
         <StyledButton onClick={() => toggleMenuOpen(!isMenuOpen)}>
-          <img src={menu} alt="Menu" height="28px" />
+          <img src={menu} alt="Menu" />
         </StyledButton>
       </div>
 
@@ -91,19 +96,19 @@ const Header = ({ siteTitle }) => {
         <Menu>
           <CancelButtonContainer>
             <StyledButton onClick={() => toggleMenuOpen(!isMenuOpen)}>
-              <img src={cancel} alt="Cancel" height="28px" />
+              <img src={cancel} alt="Cancel" />
             </StyledButton>
           </CancelButtonContainer>
           <nav style={{ display: "flex", justifyContent: "center" }}>
             <MenuItems>
               <MenuItem>
-                <StyledLink>Projects</StyledLink>
+                <StyledLink to="projects">Projects</StyledLink>
               </MenuItem>
               <MenuItem>
-                <StyledLink>About</StyledLink>
+                <StyledLink to="about">About</StyledLink>
               </MenuItem>
               <MenuItem>
-                <StyledLink>Contact</StyledLink>
+                <StyledLink to="contact">Contact</StyledLink>
               </MenuItem>
             </MenuItems>
           </nav>

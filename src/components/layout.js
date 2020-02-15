@@ -3,12 +3,10 @@ import styled from "styled-components"
 import Header from "./header"
 
 const PageContainer = styled.div``
-const Main = styled.main`
-  /* margin-top: 60px; */
-`
-const Layout = ({ children }) => (
+const Main = styled.main``
+const Layout = ({ leftIconBlack, children }) => (
   <PageContainer>
-    <Header />
+    <Header leftIconDark={leftIconBlack} />
     <Main>{children}</Main>
   </PageContainer>
 )

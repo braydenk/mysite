@@ -22,17 +22,24 @@ const MoreLink = styled(Link)`
   text-decoration: underline;
 `
 
-const Navbar = styled.nav``
+const SubtitleText = styled.h2`
+  font-size: 1.75em;
+  font-weight: 400;
+`
 
 const IndexPage = () => (
   <Layout>
     <Container>
       <TextContainer>
-        <h1>Hey, I'm Brayden!</h1>
-        <h2>I'm a graduate software engineer from Melbourne, Australia.</h2>
-        <h2 style={{ paddingTop: "16px" }}>
-          <MoreLink to="/">More about me.</MoreLink>
-        </h2>
+        <h1 style={{ fontSize: "3em", fontWeight: "400" }}>
+          Hey, I'm Brayden!
+        </h1>
+        <SubtitleText>
+          I'm a graduate software engineer from Melbourne, Australia.
+        </SubtitleText>
+        <SubtitleText style={{ paddingTop: "16px" }}>
+          <MoreLink to="/about">More about me.</MoreLink>
+        </SubtitleText>
       </TextContainer>
     </Container>
   </Layout>

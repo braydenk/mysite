@@ -9,7 +9,7 @@ const Container = styled.div`
   margin: 100px auto;
 `
 const AboutPage = () => (
-  <Layout>
+  <Layout leftIconBlack={true}>
     <Container>
       <h1>
         My name is Brayden Killeen, I'm a graduate software engineer from
