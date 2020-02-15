@@ -3,11 +3,13 @@ import styled from "styled-components"
 import Header from "./header"
 
 const PageContainer = styled.div``
-
+const Main = styled.main`
+  /* margin-top: 60px; */
+`
 const Layout = ({ children }) => (
   <PageContainer>
     <Header />
-    {children}
+    <Main>{children}</Main>
   </PageContainer>
 )
 
