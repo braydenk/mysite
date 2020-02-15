@@ -2,6 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
+import Layout from "../components/layout"
+
 const Container = styled.div`
   display: flex;
   height: 100vh;
@@ -20,15 +22,7 @@ const MoreLink = styled(Link)`
   text-decoration: underline;
 `
 
-const Navbar = styled.nav`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 16px;
-  display: flex;
-  justify-content: space-between;
-`
+const Navbar = styled.nav``
 
 const IndexPage = () => (
   <Layout>
