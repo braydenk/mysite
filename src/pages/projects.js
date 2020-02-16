@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
-
+import { DisplayH1Text } from "../components/typography"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 const Container = styled.div`
   display: flex;
@@ -12,6 +12,7 @@ const Container = styled.div`
 
 const ProjectsPage = () => (
   <Layout>
+    <SEO title="Projects page" />
     <Container>
       <div
         style={{
@@ -23,49 +24,70 @@ const ProjectsPage = () => (
           justifyContent: "center",
         }}
       >
-        <h1>Projects</h1>
+        <DisplayH1Text>Projects</DisplayH1Text>
       </div>
 
       <div style={{ marginTop: "32px", width: "100%", marginLeft: "30em" }}>
         <div>
           <h3 style={{ marginBottom: "0" }}>
-            <span>&#9899;</span>Project Title
+            <span role="img" aria-label="emoji">
+              &#9899;
+            </span>
+            Project Title
           </h3>
           <p style={{ marginTop: "12px" }}>This is a blurb for the project.</p>
         </div>
         <div>
           <h3 style={{ marginBottom: "0" }}>
-            <span>&#9899;</span>Project Title
+            <span role="img" aria-label="emoji">
+              &#9899;
+            </span>
+            Project Title
           </h3>
           <p style={{ marginTop: "12px" }}>This is a blurb for the project.</p>
         </div>
         <div>
           <h3 style={{ marginBottom: "0" }}>
-            <span>&#9899;</span>Project Title
+            <span role="img" aria-label="emoji">
+              &#9899;
+            </span>
+            Project Title
           </h3>
           <p style={{ marginTop: "12px" }}>This is a blurb for the project.</p>
         </div>
         <div>
           <h3 style={{ marginBottom: "0" }}>
-            <span>&#9899;</span>Project Title
+            <span role="img" aria-label="emoji">
+              &#9899;
+            </span>
+            Project Title
           </h3>
           <p style={{ marginTop: "12px" }}>This is a blurb for the project.</p>
         </div>
         <div>
           <h3 style={{ marginBottom: "0" }}>
-            <span>&#9899;</span>Project Title
+            <span role="img" aria-label="emoji">
+              &#9899;
+            </span>
+            Project Title
           </h3>
           <p style={{ marginTop: "12px" }}>This is a blurb for the project.</p>
         </div>
         <div>
           <h3 style={{ marginBottom: "0" }}>
-            <span>&#9899;</span>Project Title
+            <span role="img" aria-label="emoji">
+              &#9899;
+            </span>
+            Project Title
           </h3>
           <p style={{ marginTop: "12px" }}>This is a blurb for the project.</p>
         </div>
         <div>
           <h3 style={{ marginBottom: "0" }}>
-            <span>&#9899;</span>Project Title
+            <span role="img" aria-label="emoji">
+              &#9899;
+            </span>
+            Project Title
           </h3>
           <p style={{ marginTop: "12px" }}>This is a blurb for the project.</p>
         </div>

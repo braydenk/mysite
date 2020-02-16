@@ -2,10 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState } from "react"
 import styled from "styled-components"
-import menu from "../images/menu.svg"
-import cancel from "../images/x.svg"
-import terminal from "../images/terminal.svg"
-import terminalBlack from "../images/terminal-black.svg"
+import Icon from "./icon"
 
 const StyledHeader = styled.header`
   position: fixed;
@@ -80,15 +77,16 @@ const Header = props => {
             fontWeight: "bold",
           }}
         >
-          <img
-            src={props.leftIconDark ? terminalBlack : terminal}
-            alt="Terminal"
+          <Icon
+            name="terminal"
+            size="24px"
+            color={props.leftIconDark ? "#000" : "#fff"}
           />
         </Link>
       </div>
       <div>
         <StyledButton onClick={() => toggleMenuOpen(!isMenuOpen)}>
-          <img src={menu} alt="Menu" />
+          <Icon name="menu" size="24px" color="#000" />
         </StyledButton>
       </div>
 
@@ -96,7 +94,7 @@ const Header = props => {
         <Menu>
           <CancelButtonContainer>
             <StyledButton onClick={() => toggleMenuOpen(!isMenuOpen)}>
-              <img src={cancel} alt="Cancel" />
+              <Icon name="x" size="24px" color="#000" />
             </StyledButton>
           </CancelButtonContainer>
           <nav style={{ display: "flex", justifyContent: "center" }}>
